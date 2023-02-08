@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::resource('invoices', InvoicesController::class);
@@ -77,6 +77,6 @@ Route::post('Search_customers' , [Customers_ReportController::class, 'Search_cus
 
 // Notifications
 Route::get('MarkAsRead_all' , [InvoicesController::class , 'MarkAsRead_all'])->name('MarkAsRead_all');
-    
+
 
 Route::get('/{page}' , [AdminController::class, 'index']);
